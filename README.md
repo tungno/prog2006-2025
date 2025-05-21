@@ -69,7 +69,7 @@ A full compiler implementation that translates a custom stack-based language (BP
 
 ## Video Presentation
 
-A comprehensive video presentation of this portfolio is available at: [youtube-link](https://youtu.be/ExIQ7vTysU4?si=xEfot9qt9YG9k_kc)
+A comprehensive video presentation of this portfolio is available at: <a href="https://youtu.be/ExIQ7vTysU4?si=xEfot9qt9YG9k_kc" target="_blank">YouTube Video</a>
 
 ## License
 
@@ -79,4 +79,4 @@ All code in this repository is provided for academic and portfolio purposes. See
 
 Feel free to reach out if you have any questions about these implementations.
 
-- WEB: [tungno](https://tung-no.web.app/)
+- WEB: <a href="https://tung-no.web.app/" target="_blank">tungno</a>
