@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://cdnjs.cloudflare.com;
+        connect-src 'self' https://sepolia.infura.io;
+        img-src 'self' data:;
+        frame-src 'none';
+        style-src 'self' 'unsafe-inline';">
+    <title>Rock Paper Scissors DApp</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Load Ethers.js from CDN -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    
+    <!-- Front-end logic -->
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+  <h1>Rock-Paper-Scissors</h1>
+
+  <button id="connectWallet">Connect Wallet</button>
+  <p><b>Wallet address:</b> <span id="walletstatus">Not connected</span></p>
+  <hr>
+
+  <h2>1. Generate Hashed Move</h2>
+  <input type="text" id="genMove" placeholder="R/P/S"/>
+  <input type="text" id="genSalt" placeholder="secretSalt"/>
+  <button id="generateHashBtn">Generate Hash</button>
+  <p>Hash: <span id="genHashOutput"></span></p>
+
+  <hr>
+
+  <h2>2. Play (Commit/Hashed Vote)</h2>
+  <input type="text" id="hashedMove" placeholder="0x1234..."/>
+  <button id="playButton">Play</button>
+  <p><b>Stake (ETH):</b> <input type="text" id="playStake" placeholder="e.g. 0.001"/></p>
+  <p id="playStatus"></p>
+  <hr>
+
+  <h2>3. Reveal</h2>
+  <input type="text" id="revealMove" placeholder="R/P/S"/>
+  <input type="text" id="revealSalt" placeholder="secretSalt"/>
+  <button id="revealButton">Reveal</button>
+  <p id="revealStatus"></p>
+  <hr>
+
+  <h2>4. Withdraw</h2>
+  <button id="withdrawButton">Withdraw</button>
+  <p id="withdrawStatus"></p>
+
+</body>
+</html>

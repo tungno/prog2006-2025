@@ -1,0 +1,6 @@
+# Test simple list operations
+[1 2 3] print
+
+# Test list access
+[1 2 3] head print
+[1 2 3] tail print

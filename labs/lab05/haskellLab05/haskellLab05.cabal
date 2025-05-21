@@ -1,0 +1,143 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskellLab05
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/tungno/haskellLab05#readme>
+homepage:       https://github.com/tungno/haskellLab05#readme
+bug-reports:    https://github.com/tungno/haskellLab05/issues
+author:         tungno
+maintainer:     jktungno@gmail.com
+copyright:      tungno-all-right-reserved
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/tungno/haskellLab05
+
+library
+  exposed-modules:
+      Bonus
+      Lib
+      Task1
+      Task2
+      Task3
+      Task4
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable bonus-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      app/bonus
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellLab05
+  default-language: Haskell2010
+
+executable haskellLab05-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellLab05
+  default-language: Haskell2010
+
+executable task1-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      app/task1
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellLab05
+  default-language: Haskell2010
+
+executable task2-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      app/task2
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellLab05
+  default-language: Haskell2010
+
+executable task3-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      app/task3
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellLab05
+  default-language: Haskell2010
+
+executable task4-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      app/task4
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellLab05
+  default-language: Haskell2010
+
+test-suite haskellLab05-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskellLab05
+  autogen-modules:
+      Paths_haskellLab05
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , doctest
+    , haskellLab05
+  default-language: Haskell2010

@@ -1,0 +1,97 @@
+# BPROG Prelude (Standard Library)
+# This file is automatically loaded in NORMAL mode
+
+# Math functions
+inc { 1 + } fun
+dec { 1 - } fun
+square { dup * } fun
+cube { dup square * } fun
+abs { dup 0 < if { -1 * } { } } fun
+mod { swap dup rot rot div * - } fun
+even { 2 mod 0 == } fun
+odd { even not } fun
+
+# Stack operations
+2dup { dup rot dup rot } fun
+over { swap dup rot swap } fun
+nip { swap pop } fun
+tuck { swap over } fun
+
+# List utilities
+sum { 0 swap foldl { + } } fun
+product { 1 swap foldl { * } } fun
+range { 
+  # n -- [0,1,...,n-1]
+  [ ] swap
+  0 swap loop
+  { dup2 == }
+  { dup -rot cons swap 1 + }
+  swap pop
+} fun
+
+reverse { [ ] swap foldl { swap cons } } fun
+filter { 
+  # list quotation -- filtered_list
+  swap [ ] rot
+  each { 
+    dup2 exec
+    if { 
+      swap cons swap
+    } { 
+      pop
+    }
+  }
+  swap pop
+} fun
+
+# String utilities
+join { 
+  # list separator -- string
+  swap [ ] rot
+  each { 
+    swap cons swap
+  }
+  reverse
+  pop
+} fun
+
+# Control utilities
+unless { 
+  # bool quotation -- 
+  swap not if { 
+    exec
+  } { 
+    pop
+  }
+} fun
+
+when { 
+  # bool quotation -- 
+  swap if { 
+    exec
+  } { 
+    pop
+  }
+} fun
+
+# More complex utilities
+factorial {
+  # n -- n!
+  dup 0 == if {
+    pop 1
+  } {
+    dup 1 - factorial *
+  }
+} fun
+
+fibonacci {
+  # n -- fib(n)
+  dup 1 <= if {
+    # Base case: fib(0) = 0, fib(1) = 1
+  } {
+    # Recursive case: fib(n) = fib(n-1) + fib(n-2)
+    dup 1 - fibonacci
+    swap 2 - fibonacci
+    +
+  }
+} fun

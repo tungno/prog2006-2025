@@ -1,0 +1,8 @@
+# Test of quotation execution
+
+# Simple quotation execution
+{ 1 2 + } exec
+
+# Function definition and execution
+add { + } fun
+2 3 add

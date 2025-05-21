@@ -1,0 +1,18 @@
+# Test map and foldl functions
+
+# Test 1: Square each number using map
+[1 2 3 4 5] { dup * } map
+"Squares: " print dup print drop
+
+# Test 2: Sum using foldl
+[1 2 3 4 5] 0 { + } foldl
+"Sum: " print dup print drop
+
+# Test 3: Product using foldl
+[1 2 3 4 5] 1 { * } foldl
+"Product: " print dup print drop
+
+# Test 4: Define and use a function with map
+{ 2 * } "double" define
+[1 2 3 4 5] double map
+"Double each value: " print dup print drop

@@ -1,0 +1,84 @@
+Testing Option 1: Hardhat Tasks
+Step 1: Set Environment Variables
+bashCopyexport FUND_MANAGER=0x5FbDB2315678afecb367f032d93F642f64180aa3
+export DEVELOPER_PAYOUTS=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+export VALIDATOR_MULTISIG=0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+export DEVELOPER=0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+Step 2: Deposit Funds to FundManager
+bashCopynpx hardhat deposit-funds --contract $FUND_MANAGER --amount 5
+Step 3: Allocate Bounty to Issue #1
+bashCopynpx hardhat allocate-bounty --contract $FUND_MANAGER --issueid 1 --amount 1
+Step 4: Claim Bounty as Developer
+bashCopynpx hardhat claim-bounty --contract $DEVELOPER_PAYOUTS --issueid 1
+Step 5: Approve Payments as Validators (need at least 2 approvals)
+bashCopy# First validator approval
+npx hardhat approve-payout --contract $VALIDATOR_MULTISIG --issueid 1 --developer $DEVELOPER
+Then, in a second terminal or after the first completes:
+bashCopy# Second validator approval
+npx hardhat approve-payout --contract $VALIDATOR_MULTISIG --issueid 1 --developer $DEVELOPER
+Step 6: Process the Payout
+bashCopynpx hardhat process-payout --contract $DEVELOPER_PAYOUTS --issueid 1
+Step 7: Verify Status
+You can check the bounty status at any point with:
+bashCopynpx hardhat get-bounty --fundmanager $FUND_MANAGER --payouts $DEVELOPER_PAYOUTS --issueid 1
+
+
+
+Testing Option 2: React Frontend
+Step 1: Place Component Files
+Place these three components in your React project:
+
+FunderDashboard.tsx
+DeveloperDashboard.tsx
+ValidatorDashboard.tsx
+
+Make sure your project is set up to access the Hardhat artifacts.
+Step 2: Funder Flow
+
+Navigate to the Funder Dashboard in your application
+Enter the FundManager contract address: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Enter the private key for Account #0: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+Click "Connect Wallet"
+Deposit 5 ETH to the contract
+Allocate 1 ETH to Issue #1
+
+Step 3: Developer Flow
+
+Navigate to the Developer Dashboard
+Enter the DeveloperPayouts contract address: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+Enter the private key for Account #4 (developer): 0x47e179ec197488593b187f80a00eb0da91f1b9d0b13f8733639f19c30a34926a
+Click "Connect Wallet"
+Enter Issue ID: 1
+Click "Claim Bounty"
+Click "Check Claim Status" to verify the claim was registered
+
+Step 4: Validator Flows (need at least 2 validators)
+First Validator:
+
+Navigate to the Validator Dashboard
+Enter the ValidatorMultiSig contract address: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+Enter the private key for Account #1 (validator 1): 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+Click "Connect Wallet"
+Enter Issue ID: 1
+Enter Developer Address: 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+Click "Approve Payment"
+Check the approval status (should show 1/2 required)
+
+Second Validator:
+
+Open a new browser window or incognito tab
+Navigate to the Validator Dashboard
+Enter the ValidatorMultiSig contract address: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+Enter the private key for Account #2 (validator 2): 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
+Click "Connect Wallet"
+Enter Issue ID: 1
+Enter Developer Address: 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+Click "Approve Payment"
+Check the approval status (should now show 2/2 required and "Fully Approved")
+
+Step 5: Process Payout
+
+Return to the Developer Dashboard
+Enter Issue ID: 1
+Click "Check Claim Status" to refresh the status
+Click "Process Payout" to finalize the transaction

@@ -1,0 +1,15 @@
+# Foldl function tests
+1 2 + print # Verify basics work
+
+# Test 1: Sum of list
+[1 2 3] 0 { + } foldl
+print
+
+# Test 2: Product of list
+[1 2 3] 1 { * } foldl
+print
+
+# Test 3: Using a named function
+{ + } "add" define
+[1 2 3] 0 add foldl
+print

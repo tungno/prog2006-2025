@@ -1,0 +1,7 @@
+# Test comparison operations
+5 3 > print
+3 5 > print
+3 3 == print
+
+# Test basic control flow with if
+True if { "This is true" print } { "This is false" print }

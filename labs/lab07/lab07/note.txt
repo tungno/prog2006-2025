@@ -1,0 +1,4 @@
+cat data.txt | stack run
+
+to test 
+stack test

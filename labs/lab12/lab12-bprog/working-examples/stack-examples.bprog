@@ -1,0 +1,19 @@
+# Stack Operations
+# This file demonstrates basic stack operations
+# that work reliably in the BPROG REPL.
+
+# Duplicate a value
+5 dup
+# Result: Stack: [5, 5]
+
+# Swap two values
+1 2 swap
+# Result: Stack: [2, 1]
+
+# Pop (remove) top value
+1 2 3 pop
+# Result: Stack: [1, 2]
+
+# Duplicate and multiply
+5 dup *
+# Result: Stack: [25]

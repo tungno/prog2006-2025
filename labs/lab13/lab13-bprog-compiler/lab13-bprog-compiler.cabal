@@ -1,0 +1,93 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab13-bprog-compiler
+version:        0.1.0.0
+description:    Please see the README on GitHub at <>
+homepage:       https://github.com/tungno/lab13-bprog-compiler#readme
+bug-reports:    https://github.com/tungno/lab13-bprog-compiler/issues
+author:         tungno
+maintainer:     jktungno@gmail.com
+copyright:      tungno-all-right-reserved
+license:        MIT
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/tungno/lab13-bprog-compiler
+
+library
+  exposed-modules:
+      BPROGCompiler
+      BPROGCompiler.CodeGen
+      BPROGCompiler.Compiler
+      BPROGCompiler.Error
+      BPROGCompiler.Parser
+      BPROGCompiler.Prelude
+      BPROGCompiler.Types
+  other-modules:
+      Paths_lab13_bprog_compiler
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , haskeline
+    , hspec
+    , mtl
+    , text
+    , transformers
+  default-language: Haskell2010
+
+executable lab13-bprog-compiler
+  main-is: Main.hs
+  other-modules:
+      Paths_lab13_bprog_compiler
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , haskeline
+    , hspec
+    , lab13-bprog-compiler
+    , mtl
+    , text
+    , transformers
+  default-language: Haskell2010
+
+test-suite lab13-bprog-compiler-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_lab13_bprog_compiler
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , haskeline
+    , hspec
+    , lab13-bprog-compiler
+    , mtl
+    , text
+    , transformers
+  default-language: Haskell2010

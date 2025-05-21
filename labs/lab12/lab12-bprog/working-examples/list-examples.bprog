@@ -1,0 +1,34 @@
+# List Operations
+# This file demonstrates basic list operations
+# that work reliably in the BPROG REPL.
+
+# Creating a list
+[ 1 2 3 ]
+# Result: Stack: [[1, 2, 3]]
+
+# Getting the list length
+[ 1 2 3 ] length
+# Result: Stack: [3]
+
+# Getting the first element (head)
+[ 1 2 3 ] head
+# Result: Stack: [1]
+
+# Getting the rest of the list (tail)
+[ 1 2 3 ] tail
+# Result: Stack: [[2, 3]]
+
+# Adding an element to the front of a list (cons)
+1 [ 2 3 ] cons
+# Result: Stack: [[1, 2, 3]]
+
+# Combining two lists (append)
+[ 1 ] [ 2 3 ] append
+# Result: Stack: [[1, 2, 3]]
+
+# Checking if a list is empty
+[ ] empty
+# Result: Stack: [True]
+
+[ 1 2 3 ] empty
+# Result: Stack: [False]

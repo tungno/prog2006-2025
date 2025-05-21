@@ -1,0 +1,6 @@
+# Test simple map operation
+[1 2 3] { 2 * } map print
+
+# Define a function and use it with map
+{ dup * } "square" define
+[1 2 3 4 5] square map print

@@ -1,0 +1,17 @@
+# Variable Operations
+# This file demonstrates variable operations
+# that work reliably in the BPROG REPL.
+
+# Assigning a value to a variable
+x 42 :=
+# Result: Stack: []
+
+# Retrieving a variable's value
+x
+# Result: Stack: [42]
+
+# Assigning and using multiple variables
+a 10 :=
+b 20 :=
+a b +
+# Result: Stack: [30]

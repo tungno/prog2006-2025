@@ -1,0 +1,34 @@
+# Boolean Operations
+# This file demonstrates boolean operations
+# that work reliably in the BPROG REPL.
+
+# Logical AND
+True True &&
+# Result: Stack: [True]
+
+True False &&
+# Result: Stack: [False]
+
+# Logical OR
+True False ||
+# Result: Stack: [True]
+
+False False ||
+# Result: Stack: [False]
+
+# Logical NOT
+False not
+# Result: Stack: [True]
+
+True not
+# Result: Stack: [False]
+
+# Comparison operations
+10 5 >
+# Result: Stack: [True]
+
+10 20 <
+# Result: Stack: [True]
+
+10 10 ==
+# Result: Stack: [True]

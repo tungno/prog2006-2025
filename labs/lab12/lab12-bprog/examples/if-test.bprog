@@ -1,0 +1,14 @@
+# Test of if-then-else
+
+# Basic conditional with true
+True if { 10 } { 20 }
+
+# Basic conditional with false
+False if { 30 } { 40 }
+
+# Conditional with comparison
+3 2 > if { 50 } { 60 }
+
+# Conditional with variable
+cond True :=
+cond if { " yes " } { " no " }

@@ -1,0 +1,6 @@
+# Very basic test
+1 2 +
+print
+
+3 4 *
+print

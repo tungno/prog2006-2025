@@ -1,0 +1,18 @@
+# Factorial implementation in BPROG
+# Calculates n! recursively
+
+# Define the factorial function
+fact {
+    dup 0 == if
+    {
+        # Base case: 0! = 1
+        pop 1
+    }
+    {
+        # Recursive case: n! = n * (n-1)!
+        dup 1 - fact *
+    }
+} fun
+
+# Calculate factorial of 5
+5 fact

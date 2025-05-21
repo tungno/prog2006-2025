@@ -1,0 +1,29 @@
+# Simple BPROG examples that work with the current implementation
+
+# Basic arithmetic
+10 20 +
+30 -
+5 *
+2 div
+
+# Stack operations
+10 dup +
+20 30 swap -
+40 pop
+
+# Logic operations
+True False &&
+True False ||
+False not
+
+# Variable assignment
+x 42 :=
+x
+
+# Simple list operations
+[ 1 2 3 ] length
+[ 1 2 3 ] head
+[ 1 2 3 ] tail
+[ ] empty
+1 [ 2 3 ] cons
+[ 1 2 ] [ 3 4 ] append

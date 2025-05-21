@@ -1,0 +1,22 @@
+# Factorial implementation in BPROG
+# Calculates n! recursively
+
+# Define the factorial function if not already in prelude
+factorial {
+  dup 0 == if
+  {
+    # Base case: 0! = 1
+    pop 1
+  }
+  {
+    # Recursive case: n! = n * (n-1)!
+    dup 1 - factorial *
+  }
+} fun
+
+# Calculate factorial of 5
+5 factorial
+
+# Print the result
+" Factorial of 5 is: " print
+print

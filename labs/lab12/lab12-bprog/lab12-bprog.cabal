@@ -1,0 +1,137 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab12-bprog
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/tungno/lab12-bprog#readme>
+homepage:       https://github.com/tungno/lab12-bprog#readme
+bug-reports:    https://github.com/tungno/lab12-bprog/issues
+author:         tungno
+maintainer:     jktungno@gmail.com
+copyright:      tungno-all-right-reserved
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+    examples/arithmetic.bprog
+    examples/basic-compare.bprog
+    examples/basic-test.bprog
+    examples/comparison.bprog
+    examples/d-level-test.bprog
+    examples/debug.bprog
+    examples/factorial-test.bprog
+    examples/factorial.bprog
+    examples/fizzbuzz.bprog
+    examples/foldl-test.bprog
+    examples/if-test.bprog
+    examples/map-debug.bprog
+    examples/map-foldl-test.bprog
+    examples/map-test.bprog
+    examples/oneline.bprog
+    examples/other-examples.bprog
+    examples/quotation-simple.bprog
+    examples/quotation-test.bprog
+    examples/simple-factorial.bprog
+    examples/simple-if.bprog
+    examples/simple-list.bprog
+    examples/simple-map.bprog
+    examples/simple.bprog
+    examples/simplenumbers.bprog
+    examples/test-addition.bprog
+    prelude/prelude.bprog
+
+source-repository head
+  type: git
+  location: https://github.com/tungno/lab12-bprog
+
+library
+  exposed-modules:
+      BPROG
+      BPROG.Types
+      BPROG.Error
+      BPROG.Parser
+      BPROG.Interpreter
+      BPROG.Eval
+      BPROG.Prelude
+      BPROG.IO
+      BPROG.Operations.Arithmetic
+      BPROG.Operations.Stack
+      BPROG.Operations.Logic
+      BPROG.Operations.Comparison
+      BPROG.Operations.List
+      BPROG.Operations.Control
+  other-modules:
+      BPROG.Arithmetic
+      Lib
+      Paths_lab12_bprog
+  autogen-modules:
+      Paths_lab12_bprog
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , haskeline
+    , hspec
+    , mtl
+    , text
+    , transformers
+  default-language: Haskell2010
+
+executable bprog
+  main-is: Main.hs
+  other-modules:
+      Paths_lab12_bprog
+  autogen-modules:
+      Paths_lab12_bprog
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , haskeline
+    , hspec
+    , lab12-bprog
+    , mtl
+    , text
+    , transformers
+  default-language: Haskell2010
+
+test-suite lab12-bprog-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      BPROG.ExamplesSpec
+      BPROG.InterpreterSpec
+      BPROG.OperationsSpec
+      BPROG.ParserSpec
+      OfficialTests
+      Paths_lab12_bprog
+  autogen-modules:
+      Paths_lab12_bprog
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , haskeline
+    , hspec
+    , lab12-bprog
+    , mtl
+    , text
+    , transformers
+  default-language: Haskell2010

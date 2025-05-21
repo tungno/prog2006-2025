@@ -1,0 +1,13 @@
+# Test quotation (code block) parsing and execution
+
+# Define a simple quotation
+{ 1 2 + } "add" define
+
+# Execute using exec
+{ 5 6 * } exec print
+
+# Execute using function name
+add print
+
+# Store a quotation on the stack and execute it
+{ 3 4 * } exec print

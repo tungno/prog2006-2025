@@ -1,0 +1,19 @@
+# Map function tests
+1 2 + print # Verify basics work
+
+# Test 1: Square each number
+[1 2 3] { dup * } map
+print
+
+# Test 2: Double each number
+[1 2 3] { 2 * } map
+print
+
+# Test 3: Empty list test
+[] { dup * } map
+print
+
+# Test 4: Using a named function
+{ dup * } "square" define
+[1 2 3] square map
+print

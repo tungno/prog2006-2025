@@ -1,0 +1,11 @@
+npx hardhat node
+
+ensure your contracts are deployed and set up correctly:
+# Deploy contracts
+npx hardhat run scripts/deploy/03_deploy_payouts.ts --network localhost
+
+# Update validator address
+npx hardhat run scripts/update-validator.ts --network localhost
+
+# Ensure DeveloperPayouts has enough ETH
+npx hardhat run scripts/check-balances.ts --network localhost

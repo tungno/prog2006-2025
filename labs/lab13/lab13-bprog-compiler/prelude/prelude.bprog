@@ -1,0 +1,43 @@
+# BPROG Standard Prelude for WebAssembly Compiler
+
+# Stack operations
+over { 1 pick } fun
+rot { swap >r swap r> } fun
+nip { swap pop } fun
+tuck { dup -rot } fun
+
+# Arithmetic functions
+inc { 1 + } fun
+dec { 1 - } fun
+square { dup * } fun
+cube { dup dup * * } fun
+
+# Boolean functions
+and { && } fun
+or { || } fun
+xor { 2dup and not -rot or and } fun
+
+# Comparison functions
+!= { == not } fun
+<= { 2dup < -rot == or } fun
+>= { 2dup > -rot == or } fun
+
+# List functions
+range { 
+  [] swap  # Initialize empty list
+  swap loop
+  { dup 2dup >= }  # Condition: current >= end
+  {
+    dup -rot cons swap 1 +  # Add current to list, increment
+  }
+  swap pop  # Clean up loop counter, return list
+} fun
+
+# Math functions
+abs { dup 0 < if { -1 * } { } } fun
+max { 2dup < if { nip } { drop } } fun
+min { 2dup > if { nip } { drop } } fun
+
+# Conditional execution
+when { swap if { exec } { pop } } fun
+unless { swap not if { exec } { pop } } fun

@@ -1,0 +1,27 @@
+# Basic Arithmetic Operations
+# This file contains simple arithmetic operations
+# that work reliably in the BPROG REPL.
+
+# Addition
+1 2 +
+# Result: 3
+
+# Subtraction
+5 2 -
+# Result: 3
+
+# Multiplication
+3 4 *
+# Result: 12
+
+# Integer Division
+10 2 div
+# Result: 5
+
+# Float Division
+10 4 /
+# Result: 2.5
+
+# Mixed operations
+2 3 + 5 *
+# Result: 25

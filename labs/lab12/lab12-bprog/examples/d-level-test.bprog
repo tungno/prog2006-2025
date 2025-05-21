@@ -1,0 +1,32 @@
+# D-level feature test
+# This tests the minimal subset required for D-level
+
+# Integer arithmetic
+1 2 +
+3 1 -
+2 3 *
+6 2 div
+7 2 /
+
+# String handling and parsing
+" 42 " parseInteger
+" 3.14 " parseFloat
+" hello world " length
+
+# Boolean and logic
+True False &&
+True False ||
+False not
+
+# Stack operations
+5 dup
+10 20 swap
+30 pop
+
+# List operations
+[ 1 2 3 ] head
+[ 1 2 3 ] tail
+[ ] empty
+[ 1 2 3 ] length
+1 [ 2 3 ] cons
+[ 1 ] [ 2 3 ] append

@@ -1,0 +1,8 @@
+# Simple map debug test
+1 print
+
+# Define a simple function for testing
+{ 2 * } "double" define
+
+# Apply the function directly
+[1 2 3] double map print
