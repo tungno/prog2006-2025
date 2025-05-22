@@ -160,9 +160,6 @@ The UI is built using Iced's reactive architecture:
 - [Rand](https://github.com/rust-random/rand) - Random number generation
 - [Chrono](https://github.com/chronotope/chrono) - Date and time library
 
-## License
-
-This project is available under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 

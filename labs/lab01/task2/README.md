@@ -31,7 +31,7 @@ The game consists of several phases to ensure fair play on the blockchain:
 
 If you're using git:
 ```bash
-git clone <repository-url>
+git clone https://github.com/tungno/prog2006-2025.git
 cd labs/lab01/task2
 ```
 

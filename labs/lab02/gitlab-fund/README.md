@@ -214,6 +214,3 @@ The system implements several security mechanisms:
 4. **Balance Checks**: Ensures sufficient funds before allocations
 5. **Ownership Controls**: Only authorized users can perform sensitive operations
 
-## 📄 License
-
-This project is licensed under the MIT License.

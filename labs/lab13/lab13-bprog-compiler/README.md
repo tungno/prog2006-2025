@@ -421,6 +421,3 @@ This implementation complies with all the requirements for Lab 13:
 
 This project builds on the BPROG interpreter from Lab 12. The WebAssembly implementation draws inspiration from several sources, including the WebAssembly specification and community resources.
 
-## License
-
-This project is available under the terms of the MIT License.

@@ -181,6 +181,3 @@ The tests verify:
 - Complete message decoding with valid inputs
 - Error handling with various invalid inputs
 
-## License
-
-This project is licensed under the BSD-3-Clause License - see the LICENSE file for details.

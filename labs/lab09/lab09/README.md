@@ -192,6 +192,3 @@ Potential improvements for the project:
 4. **More Endpoints**: Support additional course information endpoints
 5. **Logging**: Add structured logging for better debugging
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

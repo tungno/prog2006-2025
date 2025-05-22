@@ -71,12 +71,16 @@ A full compiler implementation that translates a custom stack-based language (BP
 
 A comprehensive video presentation of this portfolio is available at: <a href="https://youtu.be/ExIQ7vTysU4?si=xEfot9qt9YG9k_kc" target="_blank">YouTube Video</a>
 
-## License
+## About Me
 
-All code in this repository is provided for academic and portfolio purposes. See individual project directories for specific license information.
+I'm a passionate software developer exploring diverse programming paradigms and building innovative solutions. 
+
+**Check out my complete portfolio:** <a href="https://tung-no.web.app/" target="_blank">tung-no.web.app</a>
 
 ## Contact
 
-Feel free to reach out if you have any questions about these implementations.
+Feel free to reach out if you have questions about these implementations or want to discuss programming, technology, or potential collaborations.
 
-- WEB: <a href="https://tung-no.web.app/" target="_blank">tungno</a>
+- **Portfolio**: <a href="https://tung-no.web.app/" target="_blank">tung-no.web.app</a>
+- **Email**: jktungno@gmail.com
+- **GitHub**: [@tungno](https://github.com/tungno)

@@ -228,6 +228,3 @@ The project includes comprehensive tests for each function:
 - Memory usage is optimized by using iterators and direct parsing where possible
 - HashMap operations provide O(1) lookups for efficient frequency counting
 
-## License
-
-This project is licensed under the terms of the MIT license.
